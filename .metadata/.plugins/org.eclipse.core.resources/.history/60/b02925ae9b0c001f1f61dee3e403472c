@@ -1,0 +1,34 @@
+package strms;
+
+import java.util.List;
+
+import com.app.core.Employee;
+
+import utils.EmployeeUtils;
+
+public class Tester1 {
+
+	public static void main(String[] args) {
+		
+
+//Display average salary of all SDs in the organization
+//Sort all Data Scientists in the organazition , as per their join date
+//Display name of the employee earning min salary from the specified dept.
+//n many more .....
+
+		 List<List<Employee>> list=EmployeeUtils.getAllEmployees();
+	List<Employee> listEmp= list.get(0);
+	List<Employee> listEmp2= list.get(1);
+	
+	listEmp.addAll(listEmp2);//add second list into first one
+	
+	double avgSal=listEmp.stream()
+	.filter(e->(e.getDesignation()).equals("Scientist"))
+	.mapToDouble(s->s.getSalary())
+	.average().getAsDouble();
+	
+	System.out.println("Average salary of developers::"+avgSal);
+	
+	}
+
+}

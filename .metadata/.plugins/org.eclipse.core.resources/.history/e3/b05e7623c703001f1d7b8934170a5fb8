@@ -1,0 +1,29 @@
+package com.app.fruits;
+
+import java.util.Scanner;
+
+public class FruitClient {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      int count = 0;
+      System.out.println("Enter no of Fruits you want to purchase = ");
+      int size = in.nextInt();
+      FruitBasket[] arr = new FruitBasket[size];
+
+      while(count <= size) {
+         System.out.println("1. Add Fruits, 2. Display Fruit Basket, 0. Exit");
+         System.out.println("Enter choice: ");
+         ++count;
+         int choice = in.nextInt();
+         switch(choice) {
+         case 1:
+            FruitUtility.addFruitIntoBasket(arr);
+            break;
+         case 2:
+            FruitUtility.DisplayDetails(arr);
+         case 3:
+         }
+      }
+
+   }
+}

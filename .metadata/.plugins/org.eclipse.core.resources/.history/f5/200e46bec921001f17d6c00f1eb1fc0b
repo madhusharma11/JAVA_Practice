@@ -1,0 +1,29 @@
+package com.app.sellOnlinePen;
+
+import java.util.Scanner;
+
+public class PenTester {
+
+	public static void main(String[] args) {
+		try(Scanner in=new Scanner(System.in))
+		{
+			System.out.println("enter pen brand");
+			String brand=in.next();
+			System.out.println("enter pen inkColor");
+			String inkColor=in.next();
+			System.out.println("enter pen color");
+			String color=in.next();
+			System.out.println("enter pen material");
+			String material=in.next();
+			System.out.println("enter pen quantity");
+			int quantity=in.nextInt();
+			System.out.println("enter pen brand");
+			double price=in.nextDouble();
+			Pen pen=new Pen(brand,inkColor,color,material,quantity
+					,price);
+			
+			
+		}
+	}
+
+}

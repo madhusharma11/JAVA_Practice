@@ -1,0 +1,72 @@
+package com.app.fruits;
+
+import java.util.Scanner;
+
+public class FruitUtility {
+   static int cnt = 0;
+
+   public static void addFruitIntoBasket(FruitBasket[] arr) {
+      Scanner in = new Scanner(System.in);
+      System.out.println("1. Mango, 2. Orange, 3. Apple");
+      System.out.println("Enter choice: ");
+      int choice = in.nextInt();
+      System.out.println("Enter fruit name:");
+      String fname = in.next();
+      System.out.println("Enter fruit color:");
+      String fcolor = in.next();
+      System.out.println("Enter Fruit Weight:");
+      float fweight = in.nextFloat();
+      System.out.println("Enter false for stale fruit and true for fresh fruit");
+      boolean freshness = in.nextBoolean();
+      switch(choice) {
+      case 1:
+         arr[cnt] = new Mango(fname, fcolor, fweight, freshness);
+         ++cnt;
+         break;
+      case 2:
+         arr[cnt] = new Orange(fname, fcolor, fweight, freshness);
+         ++cnt;
+         break;
+      case 3:
+         arr[cnt] = new Apple(fname, fcolor, fweight, freshness);
+         ++cnt;
+      }
+
+   }
+
+   public static void DisplayDetails(FruitBasket[] arr) {
+      for(int i = 0; i < cnt; ++i) {
+         System.out.println(arr[i]);
+      }
+
+   }
+
+   public static void DisplayOnlyFreshFruit(FruitBasket[] arr) {
+	   for(int i=0;i<cnt;i++)
+	   {
+		   if(arr[i].getFreshness()==true)
+		   {
+			   System.out.println(arr[i]);
+		   }
+	   }
+	   
+   }
+   public static int CountOfFruits()
+   {
+	   return cnt;
+   }
+   
+	public static String MarkFruit(FruitBasket[] arr,int index)
+	{
+		for(int i=0;i<cnt;i++)
+		{
+			if(arr[index].getFreshness()==true)
+				return "Fresh"
+				else if(arr[index].getFreshness()==false)
+					return "stale"
+						
+		}
+	}
+   }
+      
+

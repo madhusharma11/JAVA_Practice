@@ -1,0 +1,16 @@
+import java.text.DecimalFormat;
+
+public class PrecisionExample {
+    public static void main(String[] args) {
+        double number = 123.456789;
+        
+        // Define the pattern to format the number with 2 decimal places
+        DecimalFormat df = new DecimalFormat("#.##");
+        
+        // Format the number using the defined pattern
+        String formattedNumber = df.format(number);
+        
+        // Print the formatted number
+        System.out.println("Formatted number: " + formattedNumber);
+    }
+}

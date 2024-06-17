@@ -57,7 +57,6 @@ public class CustomerValidationRules {
 		validatEmailFormat(email);
 		validatPassword(password);
 		String emal=checkForDuplicateCustomer(arrCustomer,email);
-
 		return new Customer(fname,lname,emal,password,dateOfBirth,value,amount);
 	}
 

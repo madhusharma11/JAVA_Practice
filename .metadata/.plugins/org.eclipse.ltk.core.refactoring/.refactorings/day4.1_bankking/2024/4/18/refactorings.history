@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CusotmerClient.java&apos; to &apos;CustomerManagement/src/com.CustomerManagement&apos;&#x0D;&#x0A;- Original project: &apos;day4.1_bankking&apos;&#x0D;&#x0A;- Destination element: &apos;CustomerManagement/src/com.CustomerManagement&apos;&#x0D;&#x0A;- Original element: &apos;com.CustomerManagement.CusotmerClient.java&apos;" description="Copy compilation unit" destination="=CustomerManagement/src&lt;com.CustomerManagement" element1="/src&lt;com.CustomerManagement{CusotmerClient.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1714493370115" units="1" version="1.0"/>
+</session>

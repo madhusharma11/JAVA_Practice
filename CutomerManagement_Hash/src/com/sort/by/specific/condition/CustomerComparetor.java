@@ -17,7 +17,7 @@ public class CustomerComparetor implements Comparator<Customer>{
 		{	
 			if(c1.getLastName().equals(c2.getLastName()))
 				return 0;
-			return -1;
+			return c1.getLastName().compareTo(c2.getLastName());
 
 		}
 		return value;

@@ -1,0 +1,19 @@
+package com.app.fruits;
+
+public class Apple extends FruitBasket {
+   public Apple(String fname, String fcolor, float weight, boolean freshness) {
+      super(fname, fcolor, weight, freshness);
+   }
+
+   public String taste() {
+      return "APPLE Sweet and sour.";
+   }
+
+   public void jam() {
+      System.out.println("Apple jam.");
+   }
+
+   public String toString() {
+      return super.toString();
+   }
+}

@@ -1,0 +1,9 @@
+package com.app.sellOnlinePen;
+
+public class Pen {
+	private static int id=100;
+	private String brand;
+	
+	
+
+}

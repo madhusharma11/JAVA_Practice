@@ -58,12 +58,12 @@ public class CusotmerClient {
 						 */
 
 						//					SILVER(1000), GOLD(2000), DIAMOND(5000), PLATINUM(10000);
-						acceptDetailOfCustomer(customerMap,"a1","sonaz1","aassd2@gmail.com","abcdAe1","2000-12-12","silver",1000);
-						acceptDetailOfCustomer(customerMap,"a2","mona2","a1@gmail.com","aAaaa2","2001-12-12","gold",2000);
-						acceptDetailOfCustomer(customerMap,"a3","madhu3","a1@gmail.com","a3123","2000-12-12","silver",1000);
-						acceptDetailOfCustomer(customerMap,"a4","munnuz4","a4@gmail.com","a4123","2002-05-12","diamond",5000);
-						acceptDetailOfCustomer(customerMap,"a5","devz5","a3@gmail.com","a5123","2000-12-12","platinum",10000);
-						acceptDetailOfCustomer(customerMap,"a6","anjaliz6","a7@gmail.com","a6123","2000-12-12","silver",1000);
+						acceptDetailOfCustomer(customerMap,"a1","sonaz1","aass2@gmail.com","abcdAe1","2000-12-12","silver",1000);
+						acceptDetailOfCustomer(customerMap,"a2","mona2","cv1@gmail.com","aAaaa2","2001-12-12","gold",2000);
+						acceptDetailOfCustomer(customerMap,"a3","madhu3","bcd1@gmail.com","a3123","2000-12-12","silver",1000);
+						acceptDetailOfCustomer(customerMap,"a4","munnuz4","adf4@gmail.com","a4123","2002-05-12","diamond",5000);
+						acceptDetailOfCustomer(customerMap,"a5","devz5","sdghf3@gmail.com","a5123","2000-12-12","platinum",10000);
+						acceptDetailOfCustomer(customerMap,"a6","anjaliz6","shjas7@gmail.com","a6123","2000-12-12","silver",1000);
 						break;
 
 

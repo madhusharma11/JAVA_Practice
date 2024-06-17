@@ -1,0 +1,24 @@
+package com.app.sellOnlinePen;
+
+import java.time.LocalDate;
+
+public class Pen {
+	private static int id=100;
+	private String brand;
+	private String inkColor;
+	private String color;
+	private String material;
+	private int quantity;
+	private LocalDate updatedDate;
+	private double price;
+	
+	@Override
+	public String toString() {
+		return "Pen [brand=" + brand + ", inkColor=" + inkColor + ", color=" + color + ", material=" + material
+				+ ", price=" + price + "]";
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,48 @@
+package com.app.taskmanager;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class TesterTaskManager {
+
+	public static void main(String[] args) {
+		List<TaskManagerEntity> list = new ArrayList<>();
+		try (Scanner in = new Scanner(System.in)) {
+
+			boolean cnt = false;
+			while (!cnt) {
+			
+				System.out.println("enter choice/n1: add new task\n2: delete task\n0: exit");
+				int choice = in.nextInt();
+				switch(choice)
+				{
+				case 1:
+				System.out.println("Add task!!!");
+				System.out.println("enter task name:");
+				String taskName = in.next();
+				System.out.println("description:");
+				String description = in.next();
+				System.out.println("enter task Date:");
+				String taskDate = in.next();
+
+				TaskManagerEntity task = new TaskManagerEntity(taskName, description, taskDate);
+				boolean bool = TaskManagerUtility.addNewTask(task);
+				if (bool) {
+					System.out.println("Task is added successfully!!!");
+				}
+				break;
+				case 2:
+					System.out.println("enter task id: ");
+					int id=in.nextInt();
+					TaskManagerUtility.deleteTask(id);
+					
+				}
+			}
+		} catch (RuntimeException e) {
+			System.out.println(e);
+		}
+
+	}
+
+}

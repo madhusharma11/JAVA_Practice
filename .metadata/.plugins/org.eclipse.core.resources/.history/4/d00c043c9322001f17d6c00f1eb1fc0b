@@ -1,0 +1,66 @@
+package com.app.taskmanager;
+
+import java.time.LocalDate;
+
+import com.Vehicle.Color;
+
+public class TaskManagerEntity {
+	private static int taskid=0;
+	private String taskName;
+	private String description;
+	private String taskDate;
+	private Status status;
+	private boolean active;
+	public TaskManagerEntity(String taskName, String description, String taskDate) {
+		super();
+		this.taskName = taskName;
+		this.description = description;
+		this.taskDate = taskDate;
+		//Color clr=Color.valueOf(color.toUpperCase());
+		this.status = Status.valueOf("PENDING");
+		this.active = true;
+	}
+	public static int getTaskid() {
+		return taskid;
+	}
+	public static void setTaskid(int taskid) {
+		TaskManagerEntity.taskid = taskid;
+	}
+	public String getTaskName() {
+		return taskName;
+	}
+	public void setTaskName(String taskName) {
+		this.taskName = taskName;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getTaskDate() {
+		return taskDate;
+	}
+	public void setTaskDate(String taskDate) {
+		this.taskDate = taskDate;
+	}
+	public Status getStatus() {
+		return status;
+	}
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+	public boolean isActive() {
+		return active;
+	}
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+	@Override
+	public String toString() {
+		return "TaskManagerEntity [taskName=" + taskName + ", description=" + description + ", taskDate=" + taskDate
+				+ ", status=" + status + ", active=" + active + "]";
+	
+	
+	}
+}

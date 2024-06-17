@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0" value="125"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1" value="310"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2" value="100"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn" value="1"/>
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item key="ShowStatusLine" value="false"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Java_Practice/src&amp;lt;com.practice{Client_project.java[Client_project&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=MyPractice/src&amp;lt;MyPractice{ClassA.java[Client&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=MyPractice/src&amp;lt;MyPractice{Vehicle.java[Client1&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=MyPractice/src&amp;lt;MyPractice{Top1.java[client2&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=MyPractice/src&amp;lt;MyPractice{client3.java[client3&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=day_9LabPractice/src&amp;lt;tester{tester1.java[tester1&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=day11.1/src&amp;lt;tester{StoreStudentDetails.java[StoreStudentDetails&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=day11.1/src&amp;lt;tester{ReStoreStudentDetails.java[ReStoreStudentDetails&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=day12.1/src&amp;lt;threads1{Tester.java[Tester&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=day11_deserial/src&amp;lt;tester{ReStoreStudentDetails.java[ReStoreStudentDetails&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=day13_jdbc/src&amp;lt;com.app.tester{TestDBConnection.java[TestDBConnection&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=reamPractice/src&amp;lt;tester{Test1.java[Test1&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=reamPractice/src&amp;lt;temp{TemoTest1.java[TemoTest1&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="638"/>
+			<item key="DIALOG_WIDTH" value="481"/>
+			<item key="DIALOG_X_ORIGIN" value="668"/>
+			<item key="DIALOG_Y_ORIGIN" value="191"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|11.25|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+</section>

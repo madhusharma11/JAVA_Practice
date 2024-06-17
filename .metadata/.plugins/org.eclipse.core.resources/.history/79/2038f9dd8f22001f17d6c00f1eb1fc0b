@@ -1,0 +1,13 @@
+package com.app.taskmanager;
+
+import java.time.LocalDate;
+
+public class TaskManagerEntity {
+	private static int taskid=0;
+	private String taskName;
+	private String description;
+	private LocalDate taskDate;
+	private Status status;
+	
+
+}

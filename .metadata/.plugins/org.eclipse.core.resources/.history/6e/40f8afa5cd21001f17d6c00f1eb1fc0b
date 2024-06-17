@@ -1,0 +1,14 @@
+package com.app.sellOnlinePen;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class PenUtility {
+	public static Map<Integer,Pen> map = new HashMap<>();
+	
+	public static void addNewPen(Pen pen)
+	{
+		map.put(pen.getId(), pen);
+	}
+
+}

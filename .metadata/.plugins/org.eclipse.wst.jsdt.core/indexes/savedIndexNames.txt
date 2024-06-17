@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+D:\DAC_IACSD\07_JAVA\Eclipse_WS\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

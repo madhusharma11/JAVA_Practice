@@ -1,0 +1,52 @@
+package com.app.sellOnlinePen;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class PenTester {
+
+	public static void main(String[] args) {
+		try (Scanner in = new Scanner(System.in)) {
+			System.out.println("enter 0 for exit \n1 for add new pen\n2 for increase quantity");
+			int choice = in.nextInt();
+			while (choice != 0) {
+				switch (choice) {
+				case 1: {
+					System.out.println("enter pen brand");
+					String brand = in.next();
+					System.out.println("enter pen inkColor");
+					String inkColor = in.next();
+					System.out.println("enter pen color");
+					String color = in.next();
+					System.out.println("enter pen material");
+					String material = in.next();
+					System.out.println("enter pen quantity");
+					int quantity = in.nextInt();
+					System.out.println("enter pen price");
+					double price = in.nextDouble();
+					Pen pen = new Pen(brand, inkColor, color, material, quantity, price);
+					PenUtility.addNewPen(pen);
+					System.out.print(PenUtility.map);
+					break;
+				}
+				case 2:
+				{
+					System.out.println("Enter pen color");
+					String penColor=in.next();
+					System.out.println("enter ink color");
+					String inkColor=in.next();
+					System.out.println("Enter brandName");
+					String brandName=in.next();
+					System.out.println("enter ink material");
+					String material=in.next();
+					Pen pen=new Pen(penColor,inkColor,brandName,material);
+					List<Pen> list=getListOfAllPens(pen);
+				}
+
+				}
+			}
+		}
+	}
+
+	
+}

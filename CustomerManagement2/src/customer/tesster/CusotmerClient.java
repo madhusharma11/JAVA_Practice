@@ -1,10 +1,12 @@
 package customer.tesster;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
 import com.CustomerManagement.Customer;
+import com.sort.by.specific.condition.CustomerComparetor;
 
 import static com.customer.util.CustomerUtility.*;
 import static com.validate.customer.CustomerValidationRules.*;
@@ -18,12 +20,14 @@ public class CusotmerClient {
 		{
 
 			boolean exit=false;
-			List<Customer> arrCustomer=new ArrayList<>();
+			List<Customer> customerList=new ArrayList<>();
 
 			while(!exit)
 			{
-				System.out.println("1: Sign up\t2: display Customer Details \t:3: Log In\t 4change password."
-						+"\t0: Exit");		
+				System.out.println("\n1: Sign up\t2: display Customer Details \t:3: Log In\t 4:change password."
+						+"\t5: Remove account\t6: Sorting elements by Email\t7: Remove all customer details from specified plan born after specified date."
+						+ "8: sorting by dob and last name.\t0: Exit");		
+				
 				int choice=in.nextInt();
 				try {
 					switch(choice)
@@ -31,6 +35,7 @@ public class CusotmerClient {
 					case 1:
 						//String fname, String lname, String gmail, String pwd, LocalDate dateOfBirth,
 						//ServicePlan value,double registrationAmount
+						/*
 						System.out.print("Enter first name: ");
 						String fname=in.next();
 						System.out.print("Enter last name: ");
@@ -45,12 +50,21 @@ public class CusotmerClient {
 						String plan=in.next();
 						System.out.println("Enter amount: ");
 						double amount=in.nextDouble();
+						acceptDetailOfCustomer(customerList, fname,lname,  email,  pwd,  dob,plan,amount);
+						*/
 
-						acceptDetailOfCustomer(arrCustomer, fname,lname,  email,  pwd,  dob,plan,amount);
-
+	//					SILVER(1000), GOLD(2000), DIAMOND(5000), PLATINUM(10000);
+						acceptDetailOfCustomer(customerList,"a1","sonaz1","aassd2@gmail.com","abcdAe1","2000-12-12","silver",1000);
+						acceptDetailOfCustomer(customerList,"a2","mona2","a1@gmail.com","aAaaa2","2001-12-12","gold",2000);
+						acceptDetailOfCustomer(customerList,"a3","madhu3","a5@gmail.com","a3123","2000-12-12","silver",1000);
+						acceptDetailOfCustomer(customerList,"a4","munnuz4","a4@gmail.com","a4123","2002-05-12","diamond",5000);
+						acceptDetailOfCustomer(customerList,"a5","devz5","a3@gmail.com","a5123","2000-12-12","platinum",10000);
+						acceptDetailOfCustomer(customerList,"a6","anjaliz6","a7@gmail.com","a6123","2000-12-12","silver",1000);
 						break;
+						
+
 					case 2://display
-						displayCustomerDetails(arrCustomer);
+						displayCustomerDetails(customerList);
 						break;
 
 					case 3://login
@@ -58,7 +72,7 @@ public class CusotmerClient {
 						String eml=in.next();
 						System.out.println(" password: ");
 						String Pswrd=in.next();
-						login(arrCustomer, eml, Pswrd);
+						login(customerList, eml, Pswrd);
 						break;
 					case 4://update password
 						System.out.println("Enter email: ");
@@ -67,14 +81,25 @@ public class CusotmerClient {
 						String oldPass=in.next();
 						System.out.println("Enter newPass: ");
 						String newPass=in.next();
-						changePassword(arrCustomer,emal,oldPass,newPass);
+						changePassword(customerList,emal,oldPass,newPass);
 						break;
 					case 5:
 						System.out.println("Enter email: ");
 						String emll=in.next();
-						removeAccount(arrCustomer,emll);
+						removeAccount(customerList,emll);
 						break;
-					
+					case 6:
+						sortCustomerListByEmail(customerList);
+						break;
+					case 7:
+						System.out.println("Enter service plan & date ");
+						String plan2=in.next();
+						String date=in.next();
+						removeAllCustomerDetailsFromSpecifiedPlan(customerList,plan2,date);
+						break;
+					case 8:
+						Collections.sort(customerList, new CustomerComparetor());
+						break;
 					case 0:
 						exit=false;
 						break;
@@ -82,7 +107,8 @@ public class CusotmerClient {
 				}catch (Exception e)
 				{
 					in.nextLine();
-					System.out.println(e);	
+					System.out.println(e);
+					e.printStackTrace();
 				}
 			}		
 		}

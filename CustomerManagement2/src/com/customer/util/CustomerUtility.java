@@ -1,10 +1,13 @@
 package com.customer.util;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
 import com.CustomerManagement.Customer;
 import com.CustomerManagement.ServicePlan;
+import com.sort.by.specific.condition.CustomerComparetor;
 
 import CustomerException.Customer_Exceptions;
 
@@ -22,7 +25,7 @@ public class CustomerUtility {
 	}
 
 
-	//display
+//DISPLAY
 	public static void displayCustomerDetails(List<Customer> arrCustomer)
 	{
 		for(Customer c:arrCustomer)
@@ -30,21 +33,22 @@ public class CustomerUtility {
 			System.out.println(c);
 		}
 	}
-	
-	public static void login(List<Customer> arrCustomer,String email,String password)throws Customer_Exceptions
+//LOG IN
+	public static void login(List<Customer> customerList,String email,String password)throws Customer_Exceptions
 	{
 		Customer newCustomer=new Customer(email);
-		int index=arrCustomer.indexOf(newCustomer);
-		Customer c = arrCustomer.get(index);
-		if(c.getPassword().equals(password))
+		int index=customerList.indexOf(newCustomer);
+		Customer c = customerList.get(index);
+		if(c.getPassword().equals(password)) {
 			System.out.println("Successfully Log In!!!");
+			System.out.println(c);}
 		else
 			throw new Customer_Exceptions("Invalid Credentials!!!!");
 	}
-	
 
-	//Update password
 
+
+//UPDATE PASSWORD
 	public static void changePassword(List<Customer> arrCustomer,String email,String oldPass,String newPass) throws Customer_Exceptions//throws Customer_Exceptions
 	{
 		validatPassword(newPass);
@@ -53,40 +57,74 @@ public class CustomerUtility {
 		Customer c=arrCustomer.get(index);
 		if(c.getPassword().equals(oldPass))
 			c.setPassword(newPass);
-		
-	
-		
+
+
+
 		/*
 		  Customer arr[] = new Customer [2]; // List ls = new ArrayLs();
 		  		Customer  c = arr[2];		 // Customer  c = ls.get(2);
 		 */
-		
-		
-//		for(Customer c:arrCustomer)
-//		{
-//			if((c.getEmail().equals(email))&&(c.getPassword().equals(oldPass)))
-//			{
-//				c.setPassword(newPass);
-//				System.out.println("New password successfully set.");
-//				flag=true;
-//				break;
-//			}
-//		}
-//		if(flag==false) 
-//			throw new Customer_Exceptions("Email or Old password are incorrect.");
+
+
+		//		for(Customer c:arrCustomer)
+		//		{
+		//			if((c.getEmail().equals(email))&&(c.getPassword().equals(oldPass)))
+		//			{
+		//				c.setPassword(newPass);
+		//				System.out.println("New password successfully set.");
+		//				flag=true;
+		//				break;
+		//			}
+		//		}
+		//		if(flag==false) 
+		//			throw new Customer_Exceptions("Email or Old password are incorrect.");
 	}
 
-	
+
+
+
+	//Remove all customer details from specified plan born after specified date.
+	//i/p : plan n date
+	public static void removeAllCustomerDetailsFromSpecifiedPlan(List<Customer> customerList,String plan,String date)
+	{
+		List<Customer> anotherCustomerList=new ArrayList<> ();
+		LocalDate dob=parseDOB(date);
+		ServicePlan service=ServicePlan.valueOf(plan.toUpperCase());
+		
+		for(Customer c:customerList) {
+			if(c.getPlans().equals(service)) {
+				int value=c.getDob().compareTo(dob);
+				if(value>0)
+					anotherCustomerList.add(c);
+			}		
+		}
+		customerList.removeAll(anotherCustomerList);
+	}
+
+
 	//DELETE ACCOUNT
-	public static void removeAccount(List<Customer> arrCustomer,String email)throws Customer_Exceptions
+	public static void removeAccount(List<Customer> customerList,String email)throws Customer_Exceptions
 	{
 		Customer newCustomer=new Customer(email); 
-		int index=arrCustomer.indexOf(newCustomer); 
-		Customer c=arrCustomer.get(index);
+		int index=customerList.indexOf(newCustomer); 
+		//Customer c=customerList.get(index);
 		if(index==-1)
 			throw new Customer_Exceptions("Customer doen't exit!!!");
-		arrCustomer.remove(index);
+		customerList.remove(index);
 	}
+	//SORT AS PER EMAIL 
+	public static void sortCustomerListByEmail(List<Customer> arrCustomer)
+	{
+
+		Collections.sort(arrCustomer);
+		for(Customer customer:arrCustomer) {
+			System.out.println(customer);
+		}
+
+	}
+
+
+	
 
 
 }

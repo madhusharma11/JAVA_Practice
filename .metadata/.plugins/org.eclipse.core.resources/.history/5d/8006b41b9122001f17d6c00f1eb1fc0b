@@ -1,0 +1,24 @@
+package com.app.taskmanager;
+
+import java.util.Scanner;
+
+public class TesterTaskManager {
+
+	public static void main(String[] args) {
+		try(Scanner in=new Scanner(System.in))
+		{
+			System.out.println("Add task!!!");
+			System.out.println("enter task name:");
+			String taskName=in.next();
+			System.out.println("description:");
+			String description=in.next();
+			System.out.println("enter task Date:");
+			String taskDate=in.next();
+			
+			TaskManagerEntity task= new TaskManagerEntity(taskName, description, taskDate)
+			
+		}
+
+	}
+
+}

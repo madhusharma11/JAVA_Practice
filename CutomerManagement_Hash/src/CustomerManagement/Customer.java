@@ -65,11 +65,13 @@ public class Customer implements Comparable<Customer>{
 		return false;
 	}
 
+	
 	@Override
 	public  int compareTo(Customer anotherCustomer)
 	{
 		return this.getEmail().compareTo(anotherCustomer.getEmail());
 	}
+	
 	
 	public String getPassword() {
 		return password;

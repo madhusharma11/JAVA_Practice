@@ -5,13 +5,27 @@ import java.time.LocalDate;
 
 
 @SuppressWarnings("unused")
-public class Customer {
+public class Customer implements Comparable<Customer>{
 	private int customerId;
 	private static int count;
 	private String firstName, lastName, email, password;
 	private double registrationAmount=0;
 	private LocalDate dob;
 	private ServicePlan plans;
+	public LocalDate getDob() {
+		return dob;
+	}
+	public void setDob(LocalDate dob) {
+		this.dob = dob;
+	}
+	public ServicePlan getPlans() {
+		return plans;
+	}
+	public void setPlans(ServicePlan plans) {
+		this.plans = plans;
+	}
+
+
 	static {
 		count = 1000;
 	}
@@ -37,9 +51,9 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer ID : " + customerId + ", First Name : " + firstName + ", Last Name : " + lastName + ", Email : "
-				+ email + ", Password : " + password + ", Registration Amount : " + registrationAmount + ", DOB : " + dob
-				+ ", Plans : " + plans+", registrationAmount: "+registrationAmount;
+		return "Customer ID : " + customerId + "\tFirst Name : " + firstName + "\tLast Name : " + lastName + "\tEmail : "
+				+ email + "\tPassword : " + password + "\tRegistration Amount : " + registrationAmount + "\tDOB : " + dob
+				+ "\tPlans : " + plans+"\tregistrationAmount: "+registrationAmount;
 	}
 	
 	
@@ -53,11 +67,16 @@ public class Customer {
 		return false;
 	}
 
-
+	@Override
+	public  int compareTo(Customer anotherCustomer)
+	{
+		return this.getEmail().compareTo(anotherCustomer.getEmail());
+	}
 	
 	public String getPassword() {
 		return password;
 	}
+	
 
 
 	public void setPassword(String password) {
@@ -83,6 +102,30 @@ public class Customer {
 
 	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
+	}
+	public static int getCount() {
+		return count;
+	}
+	public static void setCount(int count) {
+		Customer.count = count;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public double getRegistrationAmount() {
+		return registrationAmount;
+	}
+	public void setRegistrationAmount(double registrationAmount) {
+		this.registrationAmount = registrationAmount;
 	}
 	
 }

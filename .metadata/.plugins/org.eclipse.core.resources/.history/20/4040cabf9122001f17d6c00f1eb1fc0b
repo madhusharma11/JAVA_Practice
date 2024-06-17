@@ -1,0 +1,12 @@
+package com.app.taskmanager;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TaskManagerUtility {
+List<TaskManagerEntity> list=new ArrayList<>();
+	private static List<TaskManagerEntity> addNewTask(TaskManagerEntity task) {
+		
+		return null;
+	}
+}

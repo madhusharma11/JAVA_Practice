@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;custom.excepton&apos; to &apos;Online_Voting/src&apos;&#x0D;&#x0A;- Original project: &apos;day14_jdbc&apos;&#x0D;&#x0A;- Destination element: &apos;Online_Voting/src&apos;&#x0D;&#x0A;- Original element: &apos;day14_jdbc/src/custom.excepton&apos;" description="Copy package" destination="=Online_Voting/src" element1="/src&lt;custom.excepton" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1715537731614" version="1.0"/>
+</session>
